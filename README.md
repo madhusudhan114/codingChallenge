@@ -1,2 +1,3 @@
-# codingChallenge
-codingChallenge
+# instructions
+npm install
+npm start
