@@ -1,9 +1,5 @@
 const request = require('request');
-
-const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer Y8s6dW3uAs-TZ34YRekghk7llJxJuj3JjNAcLtADi-OZ02Dl66_soagZHv-eTyQFHC8fGWfxblXrZxyW3msB1GARItcv2KG0qhzgowweVi4qxdw3fijzXeIyKKd2XXYx'
-};
+const config = require('./config');
 
 function logError(error) {
     console.log(`Something went wrong. Please check the API response ${JSON.stringify(error.error)}`);
@@ -23,7 +19,7 @@ async function getBusinesses() {
     const options = {
         url: "https://api.yelp.com/v3/businesses/search?location=Alpharetta&categories=icecream&sort_by=rating&limit=5",
         method: 'GET',
-        headers: headers
+        headers: config.headers
     };
     const results = await fetch(options);
     return results;
@@ -31,9 +27,9 @@ async function getBusinesses() {
 
 async function getReview(business) {
     const options = {
-        url: "https://api.yelp.com/v3/businesses/{id}/reviews11",
+        url: "https://api.yelp.com/v3/businesses/{id}/reviews",
         method: 'GET',
-        headers: headers
+        headers: config.headers
     };
     options.url = options.url.replace('{id}', business.id);
     const results = await fetch(options);
