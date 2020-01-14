@@ -1,0 +1,23 @@
+{
+  "name": "codingchallenge",
+  "version": "1.0.0",
+  "description": "codingChallenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhusudhan114/codingChallenge.git"
+  },
+  "author": "madhusudhan114",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhusudhan114/codingChallenge/issues"
+  },
+  "homepage": "https://github.com/madhusudhan114/codingChallenge#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
